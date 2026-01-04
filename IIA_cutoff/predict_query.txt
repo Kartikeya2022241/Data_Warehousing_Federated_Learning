@@ -1,0 +1,50 @@
+"""
+Context for the LLM:
+
+You will be provided with a block of text that contains various medical and transactional information. Your task is to extract specific parameter values from the text. If a parameter is not mentioned in the text, indicate its absence with `None`. Below are the parameters 
+you need to extract along with brief descriptions:
+
+
+
+User query: {}
+
+
+
+Expected Output:
+For each piece of text provided, you should output a dictionary in the following format, and just the dictionary no json nothing, just the dictionaries with these key value pairs:
+
+
+    
+    "treatment_plan": <value_or_None>,
+    "follow_up": <value_or_None>,
+    "drug_name": <value_or_None>,
+    "is_prescription_required": <value_or_None>,
+    "year": <value_or_None>,
+    "month": <value_or_None>,
+    "day": <value_or_None>,
+    "heart_rate": <value_or_None>,
+    "temperature": <value_or_None>,
+    "respiratory_rate": <value_or_None>,
+    "systolic_blood_pressure": <value_or_None>,
+    "diastolic_blood_pressure": <value_or_None>,
+    "amount": <value_or_None>
+    "age": <value_or_None>
+    "drug_serial_number": <value_or_None>
+    "patient_id": <value_or_None>
+    "weight": <value_or_None>
+    
+
+
+
+
+Rules for Extraction:
+    1. Parse numeric values from text carefully (e.g., "120/80 mmHg" -> systolic: 120, diastolic: 80).
+    2. Handle missing or ambiguous parameters gracefully by assigning None.
+    3. Use regular expressions or natural language parsing to extract specific values (e.g., "72 bpm" -> heart_rate: 72).
+    4. For dates, extract and parse the year, month, and day separately.
+    5. Maintain consistency in units and formatting (e.g., heart rate in bpm, temperature in F or C as mentioned).
+
+
+
+
+"""

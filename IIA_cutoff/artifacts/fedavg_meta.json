@@ -1,0 +1,20 @@
+{
+  "features": [
+    "age",
+    "gender_male",
+    "total_billing",
+    "has_claim",
+    "total_claim_amount",
+    "oxygen_bin"
+  ],
+  "label": "risk_label",
+  "bill_threshold": 600.0,
+  "clients_used": [
+    "sqlite",
+    "postgres",
+    "redis"
+  ],
+  "min_client_rows": 5,
+  "n_rows_merged": 100,
+  "mode": "db"
+}
