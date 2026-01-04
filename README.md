@@ -1,6 +1,6 @@
 
-# 🏥 Intelligent Insurance Analytics (IIA)
-**Federated Learning–based Healthcare Risk Prediction System**
+# 🏥 Data Warehousing and Federated Learning
+
 
 ---
 
